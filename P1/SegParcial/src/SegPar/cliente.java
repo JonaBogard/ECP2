@@ -5,20 +5,52 @@ public class cliente {
 	String id;
 	String nombre;
 	String direccion;
-	String teltefono;
+	String telefono;
 	String email;
 	Connect dp = null;
 
 	public cliente() {
 		dp = new Connect();
 	}
+	public boolean insertarCliente() {
+		if (dp.insertarCliente(this)) {
+			return true;
+		}else {
+			return false;
+		}
+		
+	}
+
+	public boolean cargarCliente() {
+		if (dp.cargarCliente(this)) {
+			return true;
+		}else {
+			return false;
+		}	
+	}
+
+	public boolean eliminarCliente() {
+		if (dp.eliminarCliente(this.getId())) {
+			return true;
+		}else {
+			return false;
+		}
+	}
+
+	public boolean actualizarCliente() {
+		if (dp.actualizarCliente(this)) {
+			return true;
+		}else {
+			return false;
+		}
+	}
 	
-	public cliente(String id, String nombre, String direccion, String teltefono, String email) {
+	public cliente(String id, String nombre, String direccion, String telefono, String email) {
 		super();
 		this.id = id;
 		this.nombre = nombre;
 		this.direccion = direccion;
-		this.teltefono = teltefono;
+		this.telefono = telefono;
 		this.email = email;
 	}
 	
@@ -40,11 +72,11 @@ public class cliente {
 	public void setDireccion(String direccion) {
 		this.direccion = direccion;
 	}
-	public String getTeltefono() {
-		return teltefono;
+	public String getTelefono() {
+		return telefono;
 	}
-	public void setTeltefono(String teltefono) {
-		this.teltefono = teltefono;
+	public void setTelefono(String telefono) {
+		this.telefono = telefono;
 	}
 	public String getEmail() {
 		return email;
