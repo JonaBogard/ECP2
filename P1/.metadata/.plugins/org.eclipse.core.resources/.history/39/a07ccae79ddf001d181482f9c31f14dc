@@ -1,0 +1,29 @@
+package SegPar;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+class ClienteTest {
+
+	@Test
+	void testInsertarCliente() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	void testCargarCliente() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	void testEliminarCliente() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	void testActualizarCliente() {
+		fail("Not yet implemented");
+	}
+
+}
